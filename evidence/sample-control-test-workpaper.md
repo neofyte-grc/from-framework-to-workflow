@@ -144,3 +144,83 @@ A vendor-managed support account remained active for approximately 19 hours afte
 
 ```text
 2 exceptions ÷ 6 sampled events × 100 = 33.3%
+```
+
+The exception rate exceeds the `MET-009` critical threshold of 5%. The percentage is based on a small risk-based sample and is interpreted together with the severity and nature of the exceptions.
+
+---
+
+## 12. Test Conclusion
+
+**Conclusion:** Partially effective
+
+The control operated as expected for four of six sampled events. PLG demonstrated timely removal and verification for the tested employee, administrator, and contractor events. However, the vendor-managed support account remained active beyond the relationship end time, and the courier badge required escalation before closure.
+
+The vendor-account exception is a High-severity design and operating concern because the termination workflow did not reliably cover the complete access boundary. The courier-badge exception was resolved and is retained as a Low-severity process-improvement observation.
+
+The tested results do not support a conclusion that `CTRL-004` operated effectively for the full fictional assessment period.
+
+---
+
+## 13. Finding and Corrective Action
+
+| Field | Result |
+| --- | --- |
+| Finding ID | `FIND-001` |
+| Finding title | Vendor-managed account omitted from termination workflow |
+| Severity | High |
+| Root cause | The authoritative application inventory and termination checklist did not include all vendor-managed accounts |
+| Risk | Former vendors may retain access after the approved relationship ends |
+| Recommendation | Maintain an authoritative access inventory, require sponsor confirmation, and obtain vendor disablement evidence before closure |
+| Management response | Agreed |
+| Corrective-action record | `POAM-001` |
+| Target owner | IT Director |
+| Validation required | Yes—GRC retest after implementation |
+
+---
+
+## 14. Evidence Reviewed
+
+| Evidence ID | Artifact | Result |
+| --- | --- | --- |
+| `EVID-007` | Termination and emergency-revocation records | Reviewed |
+| `EVID-011` | Provisioning and verification records | Reviewed where applicable |
+| `EVID-014` | This control-test workpaper | Final fictional sample |
+
+Supporting fictional evidence included HR separation records, sponsor notices, disablement timestamps, session-revocation records, physical-access dispositions, verification checklists, and escalation records.
+
+---
+
+## 15. Reviewer Notes
+
+The reviewer confirmed that:
+
+- The population was reconciled to the stated authoritative sources.
+- The sample included multiple workforce types and higher-risk events.
+- Exceptions were supported by the fictional evidence described in the workpaper.
+- Severity considered both the delay and the access boundary affected.
+- The High finding was linked to a corrective-action record.
+- Closure of `POAM-001` requires implementation evidence and retesting.
+
+---
+
+## 16. Sign-Off
+
+| Role | Fictional Name | Decision | Date |
+| --- | --- | --- | --- |
+| Assessor | Priya Shah, GRC Analyst | Test completed; partially effective | October 8, 2026 |
+| Reviewer | Elena Morris, Internal Audit Manager | Reviewed and approved | October 10, 2026 |
+| Control owner | Marcus Lee, IT Director | Finding acknowledged; remediation accepted | October 10, 2026 |
+
+---
+
+## 17. Final Status
+
+| Item | Status |
+| --- | --- |
+| Workpaper | Final |
+| `FIND-001` | Open pending corrective action |
+| `POAM-001` | Open pending implementation and validation |
+| Retest | Required |
+
+> **Portfolio notice:** PLG and every person, event, account, record, test result, finding, and approval in this workpaper are fictional. This sample demonstrates control-assessment documentation and does not represent an independent audit or a conclusion about a real organization.
